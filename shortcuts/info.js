@@ -1,7 +1,7 @@
 
 /* INFO */
 
-setHandler ( 'i', HYPER, () => {
+setHandler ( '8', HYPER, () => {
 
   const windows = Space.active ().windows ();
 

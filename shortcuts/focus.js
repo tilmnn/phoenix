@@ -43,6 +43,12 @@ const launchFinder = `
   end tell
 `;
 
+const launchITerm = `
+  tell application "iterm"
+    activate
+  end tell
+`;
+
 /* CALLBACKS */
 
 function callbackTerminal () {
@@ -66,8 +72,8 @@ const focus = [
   ['c', HYPER, ['Google Chrome', /^(?!Developer Tools)/, launchChrome]],
   ['d', HYPER, ['Google Chrome', /(Developer Tools)|(chrome-devtools)/, launchDevTools]],
   ['v', HYPER, ['Code', false, launchVSC]],
-  // ['t', HYPER, ['Terminal', false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
-  ['t', HYPER, ['Hyper']],
+  ['t', HYPER, ['iTerm', false, launchITerm]],
+  ['i', HYPER, ['iTerm', false, launchITerm]],
   ['f', HYPER, ['Finder', false, launchFinder]],
   ['g', HYPER, ['Tower']]
 ];
