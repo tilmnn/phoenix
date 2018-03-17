@@ -49,6 +49,12 @@ const launchITerm = `
   end tell
 `;
 
+const launchSafari = `
+  tell application "Safari"
+    activate
+  end tell
+`;
+
 /* CALLBACKS */
 
 function callbackTerminal () {
@@ -74,6 +80,7 @@ const focus = [
   ['v', HYPER, ['Code', false, launchVSC]],
   ['t', HYPER, ['iTerm', false, launchITerm]],
   ['i', HYPER, ['iTerm', false, launchITerm]],
+  ['b', HYPER, ['Safari', false, launchSafari]],
   ['f', HYPER, ['Finder', false, launchFinder]],
   ['g', HYPER, ['Tower']]
 ];
